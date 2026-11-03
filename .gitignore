@@ -8,3 +8,5 @@ __pycache__/
 .claude/settings.local.json
 # macOS
 .DS_Store
+# Recap timer state (recap_timer.py)
+.recap_state.json

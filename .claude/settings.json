@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 recap_timer.py --done)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Edit(RECAPS.md)",
+      "Write(RECAPS.md)"
+    ]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"${CLAUDE_PROJECT_DIR:-.}\" && python3 recap_timer.py; exit 0",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
